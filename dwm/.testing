@@ -1,8 +1,0 @@
-#!/bin/sh
-
-while true; do
-    ~/.status
-    sleep 1
-done
-
-
