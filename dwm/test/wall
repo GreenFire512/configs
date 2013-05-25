@@ -1,6 +1,0 @@
-#!/bin/sh
-while true;
-do
-feh --bg-scale "$(find /home/noff/Pictures/background/ -name *.jpg | shuf -n 1)"
-sleep 1800s
-done
