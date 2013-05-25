@@ -1,0 +1,9 @@
+#!/bin/sh
+RANGE=118
+while true;
+do
+number=$RANDOM
+let "number %= $RANGE"
+feh --bg-fill /home/noff/Pictures/background/$number.jpg
+sleep 600s
+done

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+getSkb() {
+    if [ "`skb -1`" = "Eng" ]; then
+        echo -en "\x05EN"
+    else
+        echo -en "\x03RU"
+    fi
+ }
+
+getDate() {
+    echo -en "\x01`date +'%a %k:%M %d %b %Y'`"
+}
+while true; do
+    xsetroot -name "$(getDate) $(getSkb)"
+    #~/.status
+    #dwmstatus
+    sleep 1
+done
+
+#xsetroot -name "$(getDate) $(getSkb)"
