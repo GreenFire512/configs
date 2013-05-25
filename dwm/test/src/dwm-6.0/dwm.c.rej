@@ -1,0 +1,12 @@
+--- dwm.c	Mon Dec 19 15:38:30 2011 +0100
++++ dwm.c	Fri Apr 06 08:25:40 2012 +0200
+@@ -830,6 +916,9 @@
+ 	if(m == selmon) { /* status is only drawn on selected monitor */
+ 		dc.w = TEXTW(stext);
+ 		dc.x = m->ww - dc.w;
++		if(showsystray && m == selmon) {
++			dc.x -= getsystraywidth();
++		}
+ 		if(dc.x < x) {
+ 			dc.x = x;
+ 			dc.w = m->ww - x;
